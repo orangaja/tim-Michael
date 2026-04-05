@@ -118,7 +118,7 @@ html {
 .Home li a:hover {
     background: #B4FF00;
     color: #0B1A12;
-    transform: scale(1.5);
+    transform: scale(1.05);
 }
 .menu-btn {
     position: fixed;
