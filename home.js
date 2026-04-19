@@ -16,8 +16,19 @@ document.addEventListener("DOMContentLoaded", function() {
         menuBtn.textContent = "☰";
     });
 });
-const container = document.querySelector(".container");
+const containers = document.querySelectorAll(".container");
 
-container.addEventListener("click", function() {
-    container.classList.toggle("active");
+window.addEventListener("scroll", () => {
+    containers.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        
+        if (top < window.innerHeight - 100) {
+            el.classList.add("show");
+        }
+    });
+});
+window.addEventListener("load", () => {
+    document.querySelectorAll(".container").forEach(el => {
+        el.classList.add("show");
+    });
 });
